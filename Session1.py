@@ -11,8 +11,7 @@ ticker = "AAPL"
 print(f"Ticker: {ticker}")
 
 # Stock price as a float:
-price = 145.32
-print(f"Price: ${price}")
+
 
 # Trading volume as an integer:
 volume = 1000000
@@ -73,13 +72,36 @@ print(f"Price Standard Deviation: ${std_dev_price:.2f}")
 # PROBLEM 1: Simple Profit Calculation
 # Given an initial price and a final price, calculate the profit (or loss) for a stock.
 initial_price = 140  # Example value, students can change this
-final_price = 145    # Example value, students can change this
+final_price = 140    # Example value, students can change this
+pl = final_price - initial_price
+if pl:
+    print("A")
+else:
+    print("B")
+
+if pl > 0:
+    print(f'The profit is:  ${pl}')
+elif pl < 0:
+    print(f'The loss is: ${pl}')
+else:
+    print("It is at breakeven")
+
 # TODO: Calculate the profit or loss
 # TODO: Print the result with a proper message (e.g., "Profit of $5" or "Loss of $3")
 
 # PROBLEM 2: Extending the Historical Data Analysis
 # Given a list of historical prices, calculate the average price and determine the number of days the price was above this average.
 historical_prices = [142.45, 143.5, 144.2, 142.9, 145.32, 146, 145.5]  # Example list, students can modify or extend this
+averageprice = statistics.mean(historical_prices)
+print(averageprice)
+total = 0
+for price in historical_prices:    
+    if price > averageprice:
+        total += 1
+print(total)
+
+
+
 # TODO: Calculate the average price
 # TODO: Determine the number of days the price was above the average
 # TODO: Print the results
