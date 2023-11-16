@@ -17,7 +17,8 @@ print("Series:\n", s)
 data = {
     'Name': ['Eric', 'Cameron', 'Drew', 'James'],
     'Age': [18, 20, 20, 21],
-    'Score': [85, 63, 77, 90]
+    'Score': [85, 63, 77, 90],
+    'Country': ['US','CA','UK','AU']
 }
 df = pd.DataFrame(data)
 print("\nDataFrame:\n", df)
@@ -45,6 +46,7 @@ print("\nSorted by Score:\n", sorted_df)
 # df.drop_duplicates() function -> drops duplicate rows
 
 # THIS IS KEY FOR THIS WEEK'S DATA CHALLENGE! If you had a CSV, you'd read it like:
+
 # df_from_csv = pd.read_csv('path_to_file.csv')
 
 # You can also read data from other types of files or sources
